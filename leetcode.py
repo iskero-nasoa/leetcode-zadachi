@@ -51,11 +51,11 @@ def print_list(head):
         head = head.next
     print("None")
 
-l1 = create_list([2, 4, 3])
-l2 = create_list([5, 6, 4])
-
-sol = Solution()
-result = sol.addTwoNumbers(l1, l2)
-
-print("Result:")
-print_list(result)
+#02/june/2026
+def two_sum(nums, target):
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i, j]
+            
+print(two_sum([3, 4, 5, 6], 7))
