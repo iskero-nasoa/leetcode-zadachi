@@ -58,4 +58,11 @@ def two_sum(nums, target):
             if nums[i] + nums[j] == target:
                 return [i, j]
             
-print(two_sum([3, 4, 5, 6], 7))
+
+#03/june/2026
+def contains_duplicate(nums):
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            if nums[i] == nums[j]:
+                return True
+    return False
