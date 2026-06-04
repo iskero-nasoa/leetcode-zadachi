@@ -66,3 +66,8 @@ def contains_duplicate(nums):
             if nums[i] == nums[j]:
                 return True
     return False
+
+#04/june/2026
+def is_poly(x):
+    x = str(x)
+    return x == x[::-1]
