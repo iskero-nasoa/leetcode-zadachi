@@ -71,3 +71,21 @@ def contains_duplicate(nums):
 def is_poly(x):
     x = str(x)
     return x == x[::-1]
+
+#05/june/2026
+def skobki(x):
+    neww = []
+    for i in x:
+        if i == "(" or i=="{" or i=="[" :
+            neww.append(i)
+        else:
+            if not neww:
+                return False
+            last = neww.pop()
+            if i == ")" and last != "(":
+                return False
+            if i == "]" and last != "[":
+                return False
+            if i == "}" and last != "{":
+                return False
+    return len(neww) == 0
