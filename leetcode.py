@@ -97,3 +97,11 @@ def find_max(nums):
         if i > largest:
             largest = i
     return largest
+
+#07/june/2026
+def find_min(nums):
+    lowest = nums[0]
+    for i in nums:
+        if i < lowest:
+            lowest = i
+    return lowest
