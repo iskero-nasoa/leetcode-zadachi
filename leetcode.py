@@ -89,3 +89,11 @@ def skobki(x):
             if i == "}" and last != "{":
                 return False
     return len(neww) == 0
+
+#06/june/2026
+def find_max(nums):
+    largest = nums[0]
+    for i in nums:
+        if i > largest:
+            largest = i
+    return largest
