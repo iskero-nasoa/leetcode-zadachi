@@ -105,3 +105,11 @@ def find_min(nums):
         if i < lowest:
             lowest = i
     return lowest
+
+#08/june/2026
+def count_even(x):
+    answer = 0
+    for i in x:
+        if i%2 == 0:
+            answer += 1
+    return answer
