@@ -113,3 +113,16 @@ def count_even(x):
         if i%2 == 0:
             answer += 1
     return answer
+
+
+#09/june/2026
+def Majority(x):
+    answer = {}
+    for i in x:
+        if i in answer:
+            answer[i] += 1
+        else:
+            answer[i] = 1
+    for y in answer:
+        if answer[y] > len(x) / 2:
+            return y
