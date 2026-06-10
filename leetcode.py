@@ -126,3 +126,17 @@ def Majority(x):
     for y in answer:
         if answer[y] > len(x) / 2:
             return y
+
+
+#10/june/2026
+def second_largest(x):
+    largest = find_max(x)
+    answer = None
+
+    for i in x:
+        if i != largest:
+            if answer is None:
+                answer = i
+            elif i > answer:
+                answer = i 
+    return answer
