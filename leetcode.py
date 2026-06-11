@@ -141,7 +141,6 @@ def second_largest(x):
                 answer = i 
     return answer
 
-
 #11/june/2026
 def count_occurrences(nums, target):
     accurences = 0
