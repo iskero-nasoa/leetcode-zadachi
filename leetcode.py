@@ -140,3 +140,12 @@ def second_largest(x):
             elif i > answer:
                 answer = i 
     return answer
+
+
+#11/june/2026
+def count_occurrences(nums, target):
+    accurences = 0
+    for i in nums:
+        if i == target:
+            accurences += 1
+    return accurences
