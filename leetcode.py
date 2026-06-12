@@ -148,3 +148,12 @@ def count_occurrences(nums, target):
         if i == target:
             accurences += 1
     return accurences
+
+
+#12/june/2026
+def positive_sum(nums):
+    answer = 0
+    for i in nums:
+        if i > 0:
+            answer += i
+    return answer
