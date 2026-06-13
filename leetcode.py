@@ -157,3 +157,11 @@ def positive_sum(nums):
         if i > 0:
             answer += i
     return answer
+
+
+#13/june/2026
+def first_negative(nums):
+    for i in nums:
+        if i < 0:
+            return i
+    return None
