@@ -165,3 +165,11 @@ def first_negative(nums):
         if i < 0:
             return i
     return None
+
+
+#14/june/2026
+def missingNumber(nums):
+    n = len(nums)
+    e = n * (n + 1) // 2
+    a = sum(nums)
+    return e - a
