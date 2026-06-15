@@ -173,3 +173,10 @@ def missingNumber(nums):
     e = n * (n + 1) // 2
     a = sum(nums)
     return e - a
+
+
+#15/june/2026
+def first_positive(nums):
+    for i in range(len(nums)):
+        if nums[i] > 0:
+            return i
