@@ -188,3 +188,15 @@ def last_positive(nums):
         if nums[i] > 0:
             return i
         
+
+#17/june/2026
+def max_profit(prices):
+    minn = prices[0]
+    profit = 0
+    for i in range(len(prices)):
+        if prices[i] < minn:
+            minn = prices[i]
+        pprofit = max(prices[i:]) - prices[i]
+        if pprofit > profit:
+            profit = pprofit
+    return profit
