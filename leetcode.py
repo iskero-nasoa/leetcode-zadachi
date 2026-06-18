@@ -200,3 +200,14 @@ def max_profit(prices):
         if pprofit > profit:
             profit = pprofit
     return profit
+
+
+#18/june/2026
+def product_except_self(nums):
+    answer = []
+    for i in range(len(nums)):
+        product = 1
+        for j in range(len(nums)):
+            if j != i:
+                product *= nums[j]
+        answer.append(product)
