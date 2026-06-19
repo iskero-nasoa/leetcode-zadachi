@@ -211,3 +211,12 @@ def product_except_self(nums):
             if j != i:
                 product *= nums[j]
         answer.append(product)
+
+
+#19/june/2026
+def longest_word(words):
+    longest = words[0]
+    for i in words:
+        if len(i) > len(longest):
+            longest = i
+    return longest
