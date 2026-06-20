@@ -220,3 +220,20 @@ def longest_word(words):
         if len(i) > len(longest):
             longest = i
     return longest
+
+
+#20/june/2026
+def is_anagram(f, s):
+    first = {}
+    second = {}
+    for i in f:
+        if i in first:
+            first[i] += 1
+        else:
+            first[i] = 1
+    for i in s:
+        if i in second:
+            second[i] += 1
+        else:
+            second[i] = 1
+    return first == second
