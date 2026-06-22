@@ -252,3 +252,20 @@ def group_anagrams(words):
             groups[key] = [word]
 
     return list(groups.values())
+
+
+#22/june/2026
+def top_k_freq(nums, k):
+    num = {}
+    for i in nums:
+        if i not in num:
+            num[i] = 1
+        else:
+            num[i] += 1
+    pairs = list(num.items())
+    pairs.sort(key=lambda x: x[1], reverse=True)
+    answer = []
+
+    for i in range(k):
+        answer.append(pairs[i][0])
+    return answer
