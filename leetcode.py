@@ -269,3 +269,23 @@ def top_k_freq(nums, k):
     for i in range(k):
         answer.append(pairs[i][0])
     return answer
+
+
+#23/june/2026
+def longest_consecutive(nums):
+    if not nums:
+        return 0
+
+    numbers = set(nums)
+    longest = 0
+
+    for num in numbers:
+        if num - 1 not in numbers:
+            current = num
+            length = 1
+            while current + 1 in numbers:
+                current += 1
+                length += 1
+            if length > longest:
+                longest = length
+    return longest
