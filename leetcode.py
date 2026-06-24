@@ -289,3 +289,21 @@ def longest_consecutive(nums):
             if length > longest:
                 longest = length
     return longest
+
+
+#24/june/2026
+def daily_temperatures(temperatures):
+    answer = []
+    for i in range(len(temperatures)):
+        days = 0
+        found = False
+        for j in range(i + 1, len(temperatures)):
+            days += 1
+            if temperatures[j] > temperatures[i]:
+                answer.append(days)
+                found = True
+                break
+        if not found:
+            answer.append(0)
+
+    return answer
