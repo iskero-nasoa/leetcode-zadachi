@@ -340,3 +340,16 @@ def binary_search(nums, target):
         else:
             right = mid - 1
     return -1
+
+
+#27/june/2026
+def max_profit(prices):
+    min_price = prices[0]
+    best_profit = 0
+    for price in prices:
+        if price < min_price:
+            min_price = price
+        profit = price - min_price
+        if profit > best_profit:
+            best_profit = profit
+    return best_profit
