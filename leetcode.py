@@ -353,3 +353,17 @@ def max_profit(prices):
         if profit > best_profit:
             best_profit = profit
     return best_profit
+
+
+#28/june/2026
+def reverse_list(head):
+    prev = None
+    current = head
+
+    while current:
+        next_node = current.next   
+        current.next = prev        
+        prev = current            
+        current = next_node       
+
+    return prev
