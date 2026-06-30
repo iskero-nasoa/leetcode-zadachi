@@ -393,3 +393,9 @@ def num_islands(grid):
                 count += 1
                 dfs(r, c)
     return count
+
+
+#30/june/2026
+def kth_largest(nums, k):
+    neww = sorted(nums, reverse=True)
+    return neww[k-1]
