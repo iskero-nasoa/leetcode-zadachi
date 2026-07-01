@@ -399,3 +399,16 @@ def num_islands(grid):
 def kth_largest(nums, k):
     neww = sorted(nums, reverse=True)
     return neww[k-1]
+
+
+#01/july/2026
+def merge_intervals(intervals):
+    intervals.sort()
+    merged = [intervals[0]]
+    for interval in intervals[1:]:
+        last = merged[-1]
+        if interval[0] <= last[1]:
+            last[1] = max(last[1], interval[1])
+        else:
+            merged.append(interval)
+    return merged
