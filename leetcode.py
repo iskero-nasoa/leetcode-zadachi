@@ -412,3 +412,17 @@ def merge_intervals(intervals):
         else:
             merged.append(interval)
     return merged
+
+
+#02/july/2026
+def move_zeroes(nums):
+    non_zero = []
+    zero_count = 0
+    for i in nums: 
+        if i != 0:
+            non_zero.append(i)
+        else: 
+            zero_count += 1
+    for y in range(zero_count):
+        non_zero.append(0)
+    return non_zero
