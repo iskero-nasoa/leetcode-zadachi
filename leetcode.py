@@ -426,3 +426,14 @@ def move_zeroes(nums):
     for y in range(zero_count):
         non_zero.append(0)
     return non_zero
+
+
+#03/july/2026
+def find_missing_num(nums):
+    nums = sorted(nums)
+    if nums[0] != 0:
+        return 0
+    for i in range(len(nums) - 1):
+        if nums[i + 1] != nums[i] + 1:
+            return nums[i] + 1
+    return len(nums)
