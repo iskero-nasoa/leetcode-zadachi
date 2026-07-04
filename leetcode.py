@@ -437,3 +437,11 @@ def find_missing_num(nums):
         if nums[i + 1] != nums[i] + 1:
             return nums[i] + 1
     return len(nums)
+
+
+#04/july/2026
+def reverse_string(x):
+    answer = ""
+    for i in range(len(x) - 1, -1, -1):
+        answer += x[i]
+    return answer
