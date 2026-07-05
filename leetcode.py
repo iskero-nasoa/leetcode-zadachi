@@ -445,3 +445,12 @@ def reverse_string(x):
     for i in range(len(x) - 1, -1, -1):
         answer += x[i]
     return answer
+
+
+#05/july/2026
+def remove_duplicates(nums):
+    answer = []
+    for i in nums:
+        if i not in answer:
+            answer.append(i)
+    return answer
