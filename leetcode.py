@@ -454,3 +454,19 @@ def remove_duplicates(nums):
         if i not in answer:
             answer.append(i)
     return answer
+
+
+#06/july/2026
+def find_difference(s, t):
+    letters = {}
+    for i in s:
+        if i in letters:
+            letters[i] += 1
+        else:
+            letters[i] = 1
+    for i in t:
+        if i not in letters:
+            return i
+        letters[i] -= 1
+        if letters[i] < 0:
+            return i
