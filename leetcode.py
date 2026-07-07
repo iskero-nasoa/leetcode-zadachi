@@ -470,3 +470,17 @@ def find_difference(s, t):
         letters[i] -= 1
         if letters[i] < 0:
             return i
+        
+
+#07/july/2026
+def find_max_consecutive_ones(nums):
+    current = 0
+    best = 0
+    for i in nums:
+        if i == 1:
+            current += 1
+            if current > best:
+                best = current
+        else:
+            current = 0
+    return best
