@@ -484,3 +484,14 @@ def find_max_consecutive_ones(nums):
         else:
             current = 0
     return best
+
+
+#08/july/2026
+def contains_nearby_duplicate(nums, k):
+    seen = {}
+    for i in range(len(nums)):
+        if nums[i] in seen:
+            if i - seen[nums[i]] <= k:
+                return True
+        seen[nums[i]] = i
+    return False
