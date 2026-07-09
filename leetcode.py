@@ -495,3 +495,12 @@ def contains_nearby_duplicate(nums, k):
                 return True
         seen[nums[i]] = i
     return False
+
+
+#09/july/2026
+def intersection(nums1, nums2):
+    answer = []
+    for i in nums1:
+        if i in nums2 and i not in answer:
+            answer.append(i)
+    return answer
