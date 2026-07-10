@@ -504,3 +504,14 @@ def intersection(nums1, nums2):
         if i in nums2 and i not in answer:
             answer.append(i)
     return answer
+
+
+#10/july/2026
+def plus_one(digits):
+    for i in range(len(digits) - 1, -1, -1):
+        if digits[i] < 9:
+            digits[i] += 1
+            return digits
+        digits[i] = 0
+    return [1] + digits
+ 
