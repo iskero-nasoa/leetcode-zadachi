@@ -515,3 +515,11 @@ def plus_one(digits):
         digits[i] = 0
     return [1] + digits
  
+
+
+ #11/july/2026
+def largest_odd_number(num):
+    for i in range(len(num) - 1, -1, -1):
+        if int(num[i]) % 2 != 0:
+            return num[:i + 1]
+    return ""
