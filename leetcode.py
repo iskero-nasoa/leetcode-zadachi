@@ -523,3 +523,9 @@ def largest_odd_number(num):
         if int(num[i]) % 2 != 0:
             return num[:i + 1]
     return ""
+
+
+#12/july/2026
+def length_of_last_word(word):
+    word = word.split()
+    return len(word[-1])
