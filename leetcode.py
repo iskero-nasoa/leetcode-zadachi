@@ -529,3 +529,14 @@ def largest_odd_number(num):
 def length_of_last_word(word):
     word = word.split()
     return len(word[-1])
+
+
+#13/july/2026
+def is_subsequence(s, t):
+    index = 0
+    for char in t:
+        if index < len(s) and char == s[index]:
+            index += 1
+            if index == len(s):
+                return True
+    return index == len(s)
