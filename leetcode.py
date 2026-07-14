@@ -540,3 +540,24 @@ def is_subsequence(s, t):
             if index == len(s):
                 return True
     return index == len(s)
+
+
+#14/july/2026
+def merge_sorted_arrays(nums1, nums2):
+    i = 0
+    j = 0
+    answer = []
+    while i < len(nums1) and j < len(nums2):
+        if nums1[i] <= nums2[j]:
+            answer.append(nums1[i])
+            i += 1
+        else:
+            answer.append(nums2[j])
+            j += 1
+    while i < len(nums1):
+        answer.append(nums1[i])
+        i += 1
+    while j < len(nums2):
+        answer.append(nums2[j])
+        j += 1
+    return answer
