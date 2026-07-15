@@ -561,3 +561,12 @@ def merge_sorted_arrays(nums1, nums2):
         answer.append(nums2[j])
         j += 1
     return answer
+
+
+#15/july/2026
+def str_str(haystack, needle):
+    for i in range(len(haystack) - len(needle) + 1):
+        if haystack[i:i + len(needle)] == needle:
+            return i
+
+    return -1
