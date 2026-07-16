@@ -570,3 +570,13 @@ def str_str(haystack, needle):
             return i
 
     return -1
+
+
+#16/july/2026
+def contains_duplicate(nums):
+    seen = {}
+    for num in nums:
+        if num in seen:
+            return True
+        seen[num] = 1
+    return False
