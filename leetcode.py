@@ -580,3 +580,18 @@ def contains_duplicate(nums):
             return True
         seen[num] = 1
     return False
+
+
+#17/july/2026
+def two_sum_sorted(numbers, target):
+    left = 0
+    right = len(numbers) - 1
+    while left < right:
+        ssum = numbers[left] + numbers[right]
+        if ssum == target:
+            return left, right
+        if ssum < target:
+            left += 1
+        if ssum > target:
+            right -= 1
+    return -1
