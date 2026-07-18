@@ -595,3 +595,20 @@ def two_sum_sorted(numbers, target):
         if ssum > target:
             right -= 1
     return -1
+
+
+#18/july/2026
+def sorted_squares(nums):
+    left = 0
+    right = len(nums) - 1
+    answer = [0] * len(nums)
+    pos = len(nums) - 1
+    while left <= right:
+        if abs(nums[left]) > abs(nums[right]):
+            answer[pos] = nums[left] ** 2
+            left += 1
+        else:
+            answer[pos] = nums[right] ** 2
+            right -= 1
+        pos -= 1
+    return answer
