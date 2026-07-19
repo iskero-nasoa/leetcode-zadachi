@@ -612,3 +612,13 @@ def sorted_squares(nums):
             right -= 1
         pos -= 1
     return answer
+
+
+
+#19/july/2026
+def remove_element(nums, val):
+    answer = []
+    for i in nums:
+        if i != val:
+            answer.append(i)
+    return answer
