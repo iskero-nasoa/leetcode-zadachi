@@ -622,3 +622,14 @@ def remove_element(nums, val):
         if i != val:
             answer.append(i)
     return answer
+
+
+#20/july/2026
+def max_sum_subarray(nums, k):
+    window_sum = sum(nums[:k])
+    best = window_sum
+    for i in range(k, len(nums)):
+        window_sum = window_sum - nums[i - k] + nums[i]
+        if window_sum > best:
+            best = window_sum
+    return best
